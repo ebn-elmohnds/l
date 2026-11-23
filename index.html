@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!-- عنوان الموقع والكلمات المفتاحية لمحركات البحث (جوجل) -->
+  <title>مطعم ابن المهندس | بيتزا • فطائر • كريب • سندويش - بني سويف</title>
+  <meta name="description" content="المنيو الرسمي لمطعم ابن المهندس في بني سويف - أول شارع عبدالسلام عارف أمام شرطة المرافق بجوار أبراج الأوقاف. أطيب بيتزا، فطائر مشلتت حادق وحلو، كريب، وسندوتشات. للطلب: 01214204656 - 01037416779" />
+  <meta name="keywords" content="مطعم ابن المهندس, ابن المهندس, منيو مطعم ابن المهندس, مطعم ابن المهندس بني سويف, بيتزا ابن المهندس, فطائر ابن المهندس, كريب ابن المهندس, سندوتشات ابن المهندس, مطاعم بني سويف" />
+  <meta name="author" content="مطعم ابن المهندس" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0c1017" />
+
+  <!-- أيقونة الموقع من الخارج (المتصفح وشاشة الهاتف) -->
+  <link rel="icon" type="image/jpeg" href="logo.jpeg" />
+  <link rel="shortcut icon" type="image/jpeg" href="logo.jpeg" />
+  <link rel="apple-touch-icon" href="logo.jpeg" />
+
+  <!-- بيانات المعاينة الخارجية عند مشاركة الرابط على واتساب وفيسبوك -->
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:site_name" content="مطعم ابن المهندس" />
+  <meta property="og:title" content="مطعم ابن المهندس | بيتزا • فطائر • كريب • سندويش" />
+  <meta property="og:description" content="منيو مطعم ابن المهندس - بني سويف، أول شارع عبدالسلام عارف - أمام شرطة المرافق - بجوار أبراج الأوقاف. للطلب: 01214204656 / 01037416779" />
+  <meta property="og:image" content="logo.jpeg" />
+  <meta property="og:locale" content="ar_EG" />
+
+  <!-- بيانات منظمة لمحرك بحث جوجل (Restaurant Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "مطعم ابن المهندس",
+    "alternateName": ["ابن المهندس", "Ibn El-Mohandes Restaurant"],
+    "image": "logo.jpeg",
+    "logo": "logo.jpeg",
+    "servesCuisine": ["بيتزا", "فطائر", "كريب", "سندوتشات"],
+    "telephone": ["+201214204656", "+201037416779"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "أول شارع عبدالسلام عارف - أمام شرطة المرافق - بجوار أبراج الأوقاف",
+      "addressLocality": "بني سويف",
+      "addressCountry": "EG"
+    },
+    "sameAs": [
+      "https://www.tiktok.com/@ebn.elmohnds?_r=1&_t=ZS-9BeQkFOA4PQ",
+      "https://www.facebook.com/share/19xSapEk89/"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #0c1017;
+      --bg-card: #141a24;
+      --border-subtle: rgba(255, 255, 255, 0.07);
+      --border-orange: rgba(245, 158, 11, 0.35);
+      --orange-main: #f59e0b;
+      --orange-pill-bg: rgba(245, 158, 11, 0.14);
+      --text-white: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      min-height: 100vh;
+      padding-bottom: 84px;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+
+    /* Pure CSS Category Switching */
+    .cat-radio {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .cat-panel {
+      display: none;
+    }
+
+    #cat-pizza:checked ~ .app-shell #panel-pizza,
+    #cat-feteer:checked ~ .app-shell #panel-feteer,
+    #cat-crepe:checked ~ .app-shell #panel-crepe,
+    #cat-sandwich:checked ~ .app-shell #panel-sandwich {
+      display: block;
+    }
+
+    #cat-pizza:checked ~ .app-shell label[for="cat-pizza"],
+    #cat-feteer:checked ~ .app-shell label[for="cat-feteer"],
+    #cat-crepe:checked ~ .app-shell label[for="cat-crepe"],
+    #cat-sandwich:checked ~ .app-shell label[for="cat-sandwich"] {
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #0c1017;
+      border-color: transparent;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    }
+
+    #cat-pizza:checked ~ .app-shell label[for="cat-pizza"] .cat-tab-thumb,
+    #cat-feteer:checked ~ .app-shell label[for="cat-feteer"] .cat-tab-thumb,
+    #cat-crepe:checked ~ .app-shell label[for="cat-crepe"] .cat-tab-thumb,
+    #cat-sandwich:checked ~ .app-shell label[for="cat-sandwich"] .cat-tab-thumb {
+      background: rgba(12, 16, 23, 0.16);
+    }
+
+    .app-shell {
+      max-width: 480px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* Top Sticky Header */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(12, 16, 23, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-mini {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mini-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 2px solid var(--orange-main);
+      background: #111622;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.28);
+    }
+
+    .brand-mini-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .brand-mini-info h1 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-white);
+      line-height: 1.2;
+    }
+
+    .brand-mini-info p {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .call-top-btn {
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #0c1017;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
+    }
+
+    /* Hero Profile Section */
+    .hero-section {
+      padding: 24px 16px 18px;
+      text-align: center;
+      background: radial-gradient(circle at top center, rgba(245, 158, 11, 0.12), transparent 68%);
+    }
+
+    .profile-logo-wrap {
+      width: 132px;
+      height: 132px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(145deg, #fbbf24, #d97706);
+      box-shadow: 0 0 32px rgba(245, 158, 11, 0.35);
+    }
+
+    .profile-logo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #0f141e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .profile-logo-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-title {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--text-white);
+      margin-bottom: 4px;
+      letter-spacing: -0.3px;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: var(--orange-main);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .hero-phones {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .phone-chip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(20, 26, 36, 0.9);
+      border: 1px solid var(--border-orange);
+      color: var(--orange-main);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      direction: ltr;
+    }
+
+    .hero-address {
+      display: inline-flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 6px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    .hero-address svg {
+      flex-shrink: 0;
+      margin-top: 3px;
+      color: var(--orange-main);
+    }
+
+    /* Sticky Category Navigation */
+    .category-nav-wrap {
+      position: sticky;
+      top: 63px;
+      z-index: 45;
+      background: rgba(12, 16, 23, 0.96);
+      backdrop-filter: blur(10px);
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .category-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .cat-tab {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      padding: 5px 6px 5px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      cursor: pointer;
+      color: var(--text-white);
+      font-size: 13px;
+      font-weight: 800;
+      user-select: none;
+    }
+
+    .cat-tab-thumb {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #1e2636;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    /* Category Hero Banner */
+    .content-area {
+      padding: 14px 16px 24px;
+    }
+
+    .cat-banner {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      padding: 22px 18px;
+      margin-bottom: 18px;
+      border: 1px solid var(--border-orange);
+      background:
+        linear-gradient(to left, rgba(12, 16, 23, 0.92) 35%, rgba(12, 16, 23, 0.55)),
+        radial-gradient(circle at 20% 50%, rgba(245, 158, 11, 0.35), #1a1f2c);
+      min-height: 118px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .cat-banner-badge {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      background: rgba(12, 16, 23, 0.85);
+      border: 1px solid var(--border-orange);
+      color: var(--orange-main);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
+    .cat-banner h2 {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--text-white);
+      margin-bottom: 2px;
+    }
+
+    .cat-banner p {
+      font-size: 12.5px;
+      color: #cbd5e1;
+      max-width: 72%;
+    }
+
+    /* Section Header & Card List */
+    .menu-section {
+      margin-bottom: 22px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      padding: 0 2px;
+    }
+
+    .section-header h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--orange-main);
+    }
+
+    .section-count {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-dim);
+    }
+
+    .items-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .menu-item {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .menu-item:last-child {
+      border-bottom: none;
+    }
+
+    /* Single Price Row */
+    .item-row-single {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .item-name {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-white);
+    }
+
+    .item-note {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .single-price {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--orange-main);
+      white-space: nowrap;
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .single-price span {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* Multi-Size Row */
+    .item-row-sizes {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sizes-pills {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .size-pill {
+      background: var(--orange-pill-bg);
+      border: 1px solid rgba(245, 158, 11, 0.28);
+      color: var(--orange-main);
+      border-radius: 999px;
+      padding: 4px 13px;
+      font-size: 13px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      direction: ltr;
+    }
+
+    .size-pill small {
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* Ingredient Chips (for Special Crepes) */
+    .ingredients-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .ing-tag {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      color: #cbd5e1;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    .ing-plus {
+      color: var(--text-dim);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    /* Footer */
+    .site-footer {
+      margin-top: 26px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .footer-brand {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text-white);
+      margin-bottom: 6px;
+    }
+
+    .footer-address {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .footer-phone-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: var(--orange-main);
+      font-weight: 800;
+      font-size: 14.5px;
+    }
+
+    .footer-phone-box span {
+      direction: ltr;
+    }
+
+    .footer-social-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .footer-social-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-orange);
+      border-radius: 12px;
+      padding: 11px 14px;
+      text-decoration: none;
+      color: var(--text-white);
+      font-weight: 800;
+      font-size: 13.5px;
+      transition: transform 0.15s ease, background 0.2s ease;
+    }
+
+    .footer-social-box:active {
+      transform: scale(0.97);
+      background: rgba(245, 158, 11, 0.12);
+    }
+
+    /* Fixed Bottom Call & Social Bar */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 60;
+      background: rgba(12, 16, 23, 0.96);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border-subtle);
+      padding: 10px 12px;
+    }
+
+    .bottom-bar-inner {
+      max-width: 480px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 44px 44px;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .bottom-btn-primary {
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #0c1017;
+      text-decoration: none;
+      border-radius: 12px;
+      padding: 11px 8px;
+      font-size: 12.5px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      direction: ltr;
+      white-space: nowrap;
+    }
+
+    .bottom-btn-secondary {
+      background: var(--bg-card);
+      border: 1px solid var(--border-orange);
+      color: var(--orange-main);
+      text-decoration: none;
+      border-radius: 12px;
+      padding: 11px 8px;
+      font-size: 12.5px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      direction: ltr;
+      white-space: nowrap;
+    }
+
+    .bottom-social-btn {
+      width: 44px;
+      height: 44px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-orange);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-white);
+      text-decoration: none;
+      transition: transform 0.15s ease, background 0.2s ease;
+    }
+
+    .bottom-social-btn:active {
+      transform: scale(0.95);
+      background: rgba(245, 158, 11, 0.16);
+    }
+
+    .bottom-social-btn.fb {
+      color: #38bdf8;
+    }
+
+    .bottom-social-btn.tt {
+      color: #f8fafc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Radio Inputs for Pure CSS Tabs -->
+  <input type="radio" name="menu-cat" id="cat-pizza" class="cat-radio" checked />
+  <input type="radio" name="menu-cat" id="cat-feteer" class="cat-radio" />
+  <input type="radio" name="menu-cat" id="cat-crepe" class="cat-radio" />
+  <input type="radio" name="menu-cat" id="cat-sandwich" class="cat-radio" />
+
+  <div class="app-shell">
+    <!-- Top Sticky Header -->
+    <header class="top-bar">
+      <div class="brand-mini">
+        <div class="brand-mini-avatar">
+          <img src="logo.jpeg" alt="مطعم ابن المهندس" />
+        </div>
+        <div class="brand-mini-info">
+          <h1>مطعم ابن المهندس</h1>
+          <p>مطعم • كريب • فطائر • بيتزا</p>
+        </div>
+      </div>
+      <a href="tel:01214204656" class="call-top-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        اتصال
+      </a>
+    </header>
+
+    <!-- Hero Profile Section -->
+    <section class="hero-section">
+      <div class="profile-logo-wrap">
+        <div class="profile-logo-inner">
+          <img src="logo.jpeg" alt="شعار مطعم ابن المهندس" />
+        </div>
+      </div>
+
+      <h2 class="hero-title">مطعم ابن المهندس</h2>
+      <p class="hero-subtitle">بيتزا • فطائر • كريب • سندويش</p>
+
+      <div class="hero-phones">
+        <a href="tel:01214204656" class="phone-chip">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          012 1420 4656
+        </a>
+        <a href="tel:01037416779" class="phone-chip">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          010 3741 6779
+        </a>
+      </div>
+
+      <div class="hero-address">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>بني سويف - أول شارع عبدالسلام عارف - أمام شرطة المرافق - بجوار أبراج الأوقاف</span>
+      </div>
+    </section>
+
+    <!-- Category Tabs -->
+    <nav class="category-nav-wrap">
+      <div class="category-tabs">
+        <label for="cat-pizza" class="cat-tab">
+          <span class="cat-tab-thumb">🍕</span>
+          <span>بيتزا</span>
+        </label>
+        <label for="cat-feteer" class="cat-tab">
+          <span class="cat-tab-thumb">🥧</span>
+          <span>فطائر</span>
+        </label>
+        <label for="cat-crepe" class="cat-tab">
+          <span class="cat-tab-thumb">🌯</span>
+          <span>كريب</span>
+        </label>
+        <label for="cat-sandwich" class="cat-tab">
+          <span class="cat-tab-thumb">🥪</span>
+          <span>سندويش</span>
+        </label>
+      </div>
+    </nav>
+
+    <!-- Menu Content Panels -->
+    <main class="content-area">
+
+      <!-- ==================== 1. PIZZA PANEL ==================== -->
+      <div id="panel-pizza" class="cat-panel">
+        <div class="cat-banner">
+          <span class="cat-banner-badge">29 صنف</span>
+          <h2>بيتزا</h2>
+          <p>عجينة طازجة من الفرن - أحجام كبيرة / وسط / صغير</p>
+        </div>
+
+        <section class="menu-section">
+          <div class="section-header">
+            <h3>بيتزا</h3>
+            <span class="section-count">16</span>
+          </div>
+          <div class="items-card">
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">مارجريتا</div><div class="sizes-pills"><span class="size-pill">80 <small>S</small></span><span class="size-pill">100 <small>M</small></span><span class="size-pill">120 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">تشيكن باربكيو</div><div class="sizes-pills"><span class="size-pill">130 <small>S</small></span><span class="size-pill">150 <small>M</small></span><span class="size-pill">170 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">دجاج متبل</div><div class="sizes-pills"><span class="size-pill">130 <small>S</small></span><span class="size-pill">150 <small>M</small></span><span class="size-pill">170 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">برجر</div><div class="sizes-pills"><span class="size-pill">100 <small>S</small></span><span class="size-pill">120 <small>M</small></span><span class="size-pill">150 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">لحمة مفرومة</div><div class="sizes-pills"><span class="size-pill">120 <small>S</small></span><span class="size-pill">140 <small>M</small></span><span class="size-pill">160 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">سجق</div><div class="sizes-pills"><span class="size-pill">110 <small>S</small></span><span class="size-pill">130 <small>M</small></span><span class="size-pill">150 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">سجق كيري</div><div class="sizes-pills"><span class="size-pill">130 <small>S</small></span><span class="size-pill">150 <small>M</small></span><span class="size-pill">170 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">بيروني</div><div class="sizes-pills"><span class="size-pill">130 <small>S</small></span><span class="size-pill">150 <small>M</small></span><span class="size-pill">170 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">تشيكن رانش</div><div class="sizes-pills"><span class="size-pill">140 <small>S</small></span><span class="size-pill">140 <small>M</small></span><span class="size-pill">180 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">ميكس أجبان</div><div class="sizes-pills"><span class="size-pill">150 <small>S</small></span><span class="size-pill">170 <small>M</small></span><span class="size-pill">200 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">ميكس لحوم</div><div class="sizes-pills"><span class="size-pill">150 <small>S</small></span><span class="size-pill">170 <small>M</small></span><span class="size-pill">200 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">ميكس دجاج</div><div class="sizes-pills"><span class="size-pill">130 <small>S</small></span><span class="size-pill">150 <small>M</small></span><span class="size-pill">170 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">شاورمة دجاج</div><div class="sizes-pills"><span class="size-pill">130 <small>S</small></span><span class="size-pill">150 <small>M</small></span><span class="size-pill">170 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">زنجر</div><div class="sizes-pills"><span class="size-pill">120 <small>S</small></span><span class="size-pill">140 <small>M</small></span><span class="size-pill">160 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">هوت دوج</div><div class="sizes-pills"><span class="size-pill">100 <small>S</small></span><span class="size-pill">120 <small>M</small></span><span class="size-pill">150 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div><div class="item-name">ابن المهندس</div><div class="item-note">البيتزا الكبيرة فقط</div></div><div class="sizes-pills"><span class="size-pill">300 <small>L</small></span></div></div></div>
+          </div>
+        </section>
+
+        <section class="menu-section">
+          <div class="section-header">
+            <h3>إضافات البيتزا</h3>
+            <span class="section-count">13</span>
+          </div>
+          <div class="items-card">
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">موزاريلا</div><div class="single-price">20 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">رومي</div><div class="single-price">20 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">ميكس جبن</div><div class="single-price">30 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">استربس</div><div class="single-price">25 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">بانيه</div><div class="single-price">25 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">زنجر</div><div class="single-price">25 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">سوسيس</div><div class="single-price">20 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">برجر</div><div class="single-price">20 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">شيدر</div><div class="single-price">15 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">رانش</div><div class="single-price">15 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">ألف جزيرة</div><div class="single-price">15 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">تركي مدخن</div><div class="single-price">15 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">بطاطس</div><div class="single-price">15 <span>ج.م</span></div></div></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ==================== 2. FETEER PANEL ==================== -->
+      <div id="panel-feteer" class="cat-panel">
+        <div class="cat-banner">
+          <span class="cat-banner-badge">30 صنف</span>
+          <h2>فطائر</h2>
+          <p>فطير مشلتت حادق وحلو بكل الحشوات</p>
+        </div>
+
+        <section class="menu-section">
+          <div class="section-header">
+            <h3>فطير مشلتت حادق</h3>
+            <span class="section-count">17</span>
+          </div>
+          <div class="items-card">
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">لحمة مفرومة</div><div class="sizes-pills"><span class="size-pill">110 <small>S</small></span><span class="size-pill">130 <small>M</small></span><span class="size-pill">150 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">شاورمة دجاج</div><div class="sizes-pills"><span class="size-pill">120 <small>S</small></span><span class="size-pill">140 <small>M</small></span><span class="size-pill">160 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">بسطرمة</div><div class="sizes-pills"><span class="size-pill">130 <small>S</small></span><span class="size-pill">150 <small>M</small></span><span class="size-pill">170 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">بسطرمة كيري</div><div class="sizes-pills"><span class="size-pill">150 <small>S</small></span><span class="size-pill">170 <small>M</small></span><span class="size-pill">200 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">سجق</div><div class="sizes-pills"><span class="size-pill">115 <small>S</small></span><span class="size-pill">135 <small>M</small></span><span class="size-pill">160 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">سجق كيري</div><div class="sizes-pills"><span class="size-pill">135 <small>S</small></span><span class="size-pill">155 <small>M</small></span><span class="size-pill">180 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">سوسيس</div><div class="sizes-pills"><span class="size-pill">100 <small>S</small></span><span class="size-pill">120 <small>M</small></span><span class="size-pill">150 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">رومي</div><div class="sizes-pills"><span class="size-pill">120 <small>S</small></span><span class="size-pill">140 <small>M</small></span><span class="size-pill">160 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">موزاريلا</div><div class="sizes-pills"><span class="size-pill">120 <small>S</small></span><span class="size-pill">140 <small>M</small></span><span class="size-pill">160 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">جبنة بيضاء</div><div class="sizes-pills"><span class="size-pill">100 <small>S</small></span><span class="size-pill">120 <small>M</small></span><span class="size-pill">150 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">تونة</div><div class="sizes-pills"><span class="size-pill">120 <small>S</small></span><span class="size-pill">140 <small>M</small></span><span class="size-pill">180 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">خضار</div><div class="sizes-pills"><span class="size-pill">90 <small>S</small></span><span class="size-pill">110 <small>M</small></span><span class="size-pill">140 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">برجر</div><div class="sizes-pills"><span class="size-pill">135 <small>S</small></span><span class="size-pill">155 <small>M</small></span><span class="size-pill">175 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">تشيكن رانش</div><div class="sizes-pills"><span class="size-pill">135 <small>S</small></span><span class="size-pill">155 <small>M</small></span><span class="size-pill">175 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">مشكل لحوم</div><div class="sizes-pills"><span class="size-pill">150 <small>S</small></span><span class="size-pill">180 <small>M</small></span><span class="size-pill">210 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">مشكل أجبان</div><div class="sizes-pills"><span class="size-pill">150 <small>S</small></span><span class="size-pill">180 <small>M</small></span><span class="size-pill">210 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div><div class="item-name">ابن المهندس</div><div class="item-note">الحجم الكبير فقط</div></div><div class="sizes-pills"><span class="size-pill">250 <small>L</small></span></div></div></div>
+          </div>
+        </section>
+
+        <section class="menu-section">
+          <div class="section-header">
+            <h3>فطير مشلتت حلو</h3>
+            <span class="section-count">10</span>
+          </div>
+          <div class="items-card">
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">بقاشة</div><div class="sizes-pills"><span class="size-pill">60 <small>S</small></span><span class="size-pill">80 <small>M</small></span><span class="size-pill">100 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">سكر</div><div class="sizes-pills"><span class="size-pill">20 <small>S</small></span><span class="size-pill">40 <small>M</small></span><span class="size-pill">60 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">كريمة</div><div class="sizes-pills"><span class="size-pill">45 <small>S</small></span><span class="size-pill">65 <small>M</small></span><span class="size-pill">85 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">كريمة مكسرات</div><div class="sizes-pills"><span class="size-pill">60 <small>S</small></span><span class="size-pill">80 <small>M</small></span><span class="size-pill">100 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">بسبوسة كريمة</div><div class="sizes-pills"><span class="size-pill">70 <small>S</small></span><span class="size-pill">90 <small>M</small></span><span class="size-pill">110 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">كنافة كريمة</div><div class="sizes-pills"><span class="size-pill">70 <small>S</small></span><span class="size-pill">90 <small>M</small></span><span class="size-pill">110 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">كنافة بسبوسة</div><div class="sizes-pills"><span class="size-pill">80 <small>S</small></span><span class="size-pill">100 <small>M</small></span><span class="size-pill">120 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">قشطة عسل</div><div class="sizes-pills"><span class="size-pill">80 <small>S</small></span><span class="size-pill">100 <small>M</small></span><span class="size-pill">120 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">شوكولاتة</div><div class="sizes-pills"><span class="size-pill">90 <small>S</small></span><span class="size-pill">115 <small>M</small></span><span class="size-pill">140 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">فطير حلو مشكل</div><div class="sizes-pills"><span class="size-pill">70 <small>S</small></span><span class="size-pill">90 <small>M</small></span><span class="size-pill">110 <small>L</small></span></div></div></div>
+          </div>
+        </section>
+
+        <section class="menu-section">
+          <div class="section-header">
+            <h3>مشلتت سمن بلدي</h3>
+            <span class="section-count">2</span>
+          </div>
+          <div class="items-card">
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">وسط</div><div class="single-price">80 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">كبير</div><div class="single-price">120 <span>ج.م</span></div></div></div>
+          </div>
+        </section>
+
+        <section class="menu-section">
+          <div class="section-header">
+            <h3>إضافات الفطائر</h3>
+            <span class="section-count">1</span>
+          </div>
+          <div class="items-card">
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">إضافة وش بيتزا</div><div class="sizes-pills"><span class="size-pill">20 <small>S</small></span><span class="size-pill">30 <small>M</small></span><span class="size-pill">40 <small>L</small></span></div></div></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ==================== 3. CREPE PANEL ==================== -->
+      <div id="panel-crepe" class="cat-panel">
+        <div class="cat-banner">
+          <span class="cat-banner-badge">31 صنف</span>
+          <h2>كريب</h2>
+          <p>كريب لحوم، فراخ، مكس وحلو</p>
+        </div>
+
+        <section class="menu-section">
+          <div class="section-header">
+            <h3>كريب لحوم</h3>
+            <span class="section-count">8</span>
+          </div>
+          <div class="items-card">
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">برجر</div><div class="single-price">50 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">برجر دبل</div><div class="single-price">75 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">سوسيس</div><div class="single-price">50 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">سوسيس دبل</div><div class="single-price">75 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">برجر وسوسيس</div><div class="single-price">75 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">سجق</div><div class="single-price">65 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">لحمة مفرومة</div><div class="single-price">70 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">كبدة</div><div class="single-price">65 <span>ج.م</span></div></div></div>
+          </div>
+        </section>
+
+        <section class="menu-section">
+          <div class="section-header">
+            <h3>كريب مكس</h3>
+            <span class="section-count">5</span>
+          </div>
+          <div class="items-card">
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">ميكس لحوم</div><div class="single-price">90 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">ميكس دجاج</div><div class="single-price">90 <span>ج.م</span></div></div></div>
+            <div class="menu-item">
+              <div class="item-row-single"><div class="item-name">ميكس الوحش</div><div class="single-price">110 <span>ج.م</span></div></div>
+              <div class="ingredients-list">
+                <span class="ing-tag">برجر</span><span class="ing-plus">+</span>
+                <span class="ing-tag">سوسيس</span><span class="ing-plus">+</span>
+                <span class="ing-tag">استربس</span><span class="ing-plus">+</span>
+                <span class="ing-tag">شاورمة دجاج</span><span class="ing-plus">+</span>
+                <span class="ing-tag">جامبو صوص</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="item-row-single"><div class="item-name">ميكس الربيق</div><div class="single-price">100 <span>ج.م</span></div></div>
+              <div class="ingredients-list">
+                <span class="ing-tag">ميكس لحوم</span><span class="ing-plus">+</span>
+                <span class="ing-tag">استربس</span><span class="ing-plus">+</span>
+                <span class="ing-tag">رومي مدخن</span><span class="ing-plus">+</span>
+                <span class="ing-tag">موزاريلا</span><span class="ing-plus">+</span>
+                <span class="ing-tag">جامبو صوص</span>
+              </div>
+            </div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">ميكس أجبان</div><div class="single-price">80 <span>ج.م</span></div></div></div>
+          </div>
+        </section>
+
+        <section class="menu-section">
+          <div class="section-header">
+            <h3>كريب فراخ</h3>
+            <span class="section-count">10</span>
+          </div>
+          <div class="items-card">
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">دجاج بانيه</div><div class="single-price">65 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">استربس</div><div class="single-price">70 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">زنجر</div><div class="single-price">70 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">شاورمة دجاج</div><div class="single-price">70 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">سوبر رانش</div><div class="single-price">75 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">تشيكن برجر</div><div class="single-price">65 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">سوسيس دجاج</div><div class="single-price">65 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">فاهيتا دجاج</div><div class="single-price">75 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">شيش طاووق</div><div class="single-price">75 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">تشيكن رانش</div><div class="single-price">80 <span>ج.م</span></div></div></div>
+          </div>
+        </section>
+
+        <section class="menu-section">
+          <div class="section-header">
+            <h3>كريب حلو</h3>
+            <span class="section-count">4</span>
+          </div>
+          <div class="items-card">
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">شوكولاتة إيطالي</div><div class="single-price">50 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">شوكولاتة نوتيلا</div><div class="single-price">70 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">شوكولاتة موز</div><div class="single-price">60 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">شوكولاتة مكسرات</div><div class="single-price">65 <span>ج.م</span></div></div></div>
+          </div>
+        </section>
+
+        <section class="menu-section">
+          <div class="section-header">
+            <h3>كريب متنوع</h3>
+            <span class="section-count">4</span>
+          </div>
+          <div class="items-card">
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">بطاطس</div><div class="single-price">40 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">رومي</div><div class="single-price">55 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">موزاريلا</div><div class="single-price">60 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">تونة</div><div class="single-price">65 <span>ج.م</span></div></div></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ==================== 4. SANDWICH PANEL ==================== -->
+      <div id="panel-sandwich" class="cat-panel">
+        <div class="cat-banner">
+          <span class="cat-banner-badge">33 صنف</span>
+          <h2>سندويش</h2>
+          <p>صاروخ، كيزر، فرنساوي وسوري</p>
+        </div>
+
+        <section class="menu-section">
+          <div class="section-header">
+            <h3>فطيرة صاروخ</h3>
+            <span class="section-count">12</span>
+          </div>
+          <div class="items-card">
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">لحمة مفرومة</div><div class="single-price">100 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">سجق</div><div class="single-price">100 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">بسطرمة</div><div class="single-price">120 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">سوسيس</div><div class="single-price">90 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">كيري</div><div class="single-price">110 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">لحوم</div><div class="single-price">120 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">أجبان</div><div class="single-price">120 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">تونة</div><div class="single-price">110 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">رومي</div><div class="single-price">100 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">موزاريلا</div><div class="single-price">100 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">شاورمة دجاج</div><div class="single-price">110 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">برجر</div><div class="single-price">100 <span>ج.م</span></div></div></div>
+          </div>
+        </section>
+
+        <section class="menu-section">
+          <div class="section-header">
+            <h3>سندوتشات كيزر</h3>
+            <span class="section-count">5</span>
+          </div>
+          <div class="items-card">
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">برجر كلاسيك</div><div class="single-price">50 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">برجر بيض</div><div class="single-price">60 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">تشيكن رانش</div><div class="single-price">80 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">تشيكن ألف جزيرة</div><div class="single-price">100 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">تشيكن تكساس</div><div class="single-price">100 <span>ج.م</span></div></div></div>
+          </div>
+        </section>
+
+        <section class="menu-section">
+          <div class="section-header">
+            <h3>سندوتشات فرنساوي</h3>
+            <span class="section-count">9</span>
+          </div>
+          <div class="items-card">
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">كبدة</div><div class="sizes-pills"><span class="size-pill">20 <small>S</small></span><span class="size-pill">50 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-sizes"><div class="item-name">سجق</div><div class="sizes-pills"><span class="size-pill">20 <small>S</small></span><span class="size-pill">50 <small>L</small></span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">استربس</div><div class="single-price">75 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">زنجر</div><div class="single-price">75 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">فاهيتا دجاج</div><div class="single-price">70 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">شاورمة دجاج</div><div class="single-price">70 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">هوت دوج</div><div class="single-price">65 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">بانيه</div><div class="single-price">65 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">بطاطس</div><div class="single-price">25 <span>ج.م</span></div></div></div>
+          </div>
+        </section>
+
+        <section class="menu-section">
+          <div class="section-header">
+            <h3>سندوتشات سوري</h3>
+            <span class="section-count">7</span>
+          </div>
+          <div class="items-card">
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">بطاطس</div><div class="single-price">25 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">بطاطس موزاريلا</div><div class="single-price">35 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">زنجر</div><div class="single-price">50 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">شاورمة فراخ</div><div class="single-price">50 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">استربس</div><div class="single-price">50 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">كبدة</div><div class="single-price">40 <span>ج.م</span></div></div></div>
+            <div class="menu-item"><div class="item-row-single"><div class="item-name">سجق</div><div class="single-price">40 <span>ج.م</span></div></div></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-brand">مطعم ابن المهندس</div>
+        <div class="footer-address">
+          بني سويف - أول شارع عبدالسلام عارف - أمام شرطة المرافق - بجوار أبراج الأوقاف
+        </div>
+        <a href="tel:01214204656" class="footer-phone-box">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>012 1420 4656</span>
+        </a>
+        <a href="tel:01037416779" class="footer-phone-box">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>010 3741 6779</span>
+        </a>
+
+        <!-- Social Media Boxes in Footer -->
+        <div class="footer-social-row">
+          <a href="https://www.tiktok.com/@ebn.elmohnds?_r=1&_t=ZS-9BeQkFOA4PQ" target="_blank" rel="noopener noreferrer" class="footer-social-box">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+            <span>تيك توك</span>
+          </a>
+          <a href="https://www.facebook.com/share/19xSapEk89/" target="_blank" rel="noopener noreferrer" class="footer-social-box">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#38bdf8"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            <span>فيسبوك</span>
+          </a>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Fixed Bottom Call & Social Bar -->
+    <div class="bottom-bar">
+      <div class="bottom-bar-inner">
+        <a href="tel:01214204656" class="bottom-btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          012 1420 4656
+        </a>
+        <a href="tel:01037416779" class="bottom-btn-secondary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          010 3741 6779
+        </a>
+        <a href="https://www.tiktok.com/@ebn.elmohnds?_r=1&_t=ZS-9BeQkFOA4PQ" target="_blank" rel="noopener noreferrer" class="bottom-social-btn tt" aria-label="تيك توك">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/share/19xSapEk89/" target="_blank" rel="noopener noreferrer" class="bottom-social-btn fb" aria-label="فيسبوك">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
